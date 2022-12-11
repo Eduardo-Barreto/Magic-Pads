@@ -126,15 +126,15 @@ public:
     {
         if (risingEdge())
         {
-            DebugLog(pressedKey);
             Keyboard.release(releasedKey);
             Keyboard.press(pressedKey);
+            DebugLog(pressedKey);
         }
         else if (fallingEdge())
         {
-            DebugLog(releasedKey);
             Keyboard.release(pressedKey);
             Keyboard.press(releasedKey);
+            DebugLog(releasedKey);
         }
     }
 };
