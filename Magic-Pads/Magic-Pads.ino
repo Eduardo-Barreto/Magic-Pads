@@ -18,16 +18,17 @@
 
 pad pads[] = {
     // Pressed Key, Released Key, Port, Bit, Pin, Debounce Time
-    {'a', 0x00, &pad_1_rPort, pad_1_bit, pad_1_pin, 15},
-    {'b', 0x00, &pad_2_rPort, pad_2_bit, pad_2_pin, 15},
-    {'c', 0x00, &pad_3_rPort, pad_3_bit, pad_3_pin, 15},
-    {'d', 0x00, &pad_4_rPort, pad_4_bit, pad_4_pin, 15},
-    {'e', 0x00, &pad_5_rPort, pad_5_bit, pad_5_pin, 15}};
+    {'t', 0x00, &pad_1_rPort, pad_1_bit, pad_1_pin, 15},
+    {'y', 0x00, &pad_2_rPort, pad_2_bit, pad_2_pin, 15},
+    {'u', 0x00, &pad_3_rPort, pad_3_bit, pad_3_pin, 15},
+    {'i', 0x00, &pad_4_rPort, pad_4_bit, pad_4_pin, 15},
+    {'o', 0x00, &pad_5_rPort, pad_5_bit, pad_5_pin, 15}};
 
 void setup()
 {
     pinMode(enable_pin, INPUT_PULLUP);
-    DebugInit(115200);
+    DebugInit(9600);
+    delay(500);
 
     DebugLogln("Aguardando enable...");
     while (tstBit(enable_rPort, enable_bit))

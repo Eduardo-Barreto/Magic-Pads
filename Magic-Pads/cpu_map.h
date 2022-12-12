@@ -21,7 +21,7 @@
 #define pad_3_bit 4
 
 #define pad_4_rPort PINC
-#define pad_4_bit 4
+#define pad_4_bit 6
 
 #define pad_5_rPort PIND
 #define pad_5_bit 7
